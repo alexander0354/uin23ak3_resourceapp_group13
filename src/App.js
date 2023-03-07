@@ -1,5 +1,10 @@
 import logo from './logo.svg';
 import './App.css';
+import Main from './components/Main';
+import Resources from './resources/Resources';
+
+
+
 
 function App() {
   return (

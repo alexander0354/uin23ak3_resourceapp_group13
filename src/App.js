@@ -6,6 +6,7 @@ function App() {
     <div>
       <header>
         <h1>Ressursarkiv</h1>
+        <h2>hei jeg hetter mikkel</h2>
       </header>
     </div>
   );

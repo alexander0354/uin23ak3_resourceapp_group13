@@ -1,0 +1,111 @@
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;600&display=swap');
+
+
+
+* {
+  box-sizing: border-box;
+}
+
+header {
+  width: 100%;
+  display: flex;
+  border: 1px solid var(--black);
+  padding: 1rem;
+  padding-left: 2rem;
+  justify-content: space-between;
+  border-style: groove
+}
+
+
+
+body{
+   
+    color:blue;
+      height: 100%;
+      margin: 4.0%;
+      background-color:white ;
+      font-family: 'quicsand', sans-serif;
+      
+      }
+  
+      h1{
+        border-style: groove;
+        border-width: 3px;
+        padding: 2rem;
+    }
+
+    main {
+      width:100%;
+      display: flex;
+      max-width: var(--maxwidth);
+      border: 1px solid var(--gray);
+      display: flex;
+      flex-wrap: wrap;
+      padding-left: 2rem;
+  }
+  
+  nav {
+    width: 100%;
+    max-width: var(--maxwidth);
+    display: flex;
+    margin-top: 3rem;
+    border-bottom: 5px solid var(--aqua);
+    column-gap: 1rem;
+}
+
+nav a{
+  display: flex;
+  text-decoration: none;
+  color: var(--gray);
+  background-color: var(--white);
+  display: inline-block;
+  border-top: 1px solid var(--gray);
+  border-left: 1px solid var(--gray);
+  border-right: 1px solid var(--gray);
+  padding: 1.2rem;
+  font-size: 1.6rem;
+  text-transform: uppercase;
+  transition: ease-in-out .4s;
+
+  
+}
+
+
+@media only screen and (max-width:900px) {
+
+  .category_title {
+      text-transform: uppercase;                                                                                                                                                                                                                                                                                      
+      color: var(--gray);
+      font-size: 20px;
+  }
+
+  main {
+      width:100%;
+      max-width: 480px;
+      display: flex;
+  }
+  
+  nav {
+      width: 100%;
+      max-width: 480px;
+      display: flex;
+      flex-wrap: wrap;
+      flex-direction: column;    
+  }
+
+  nav a{
+      font-size: 16px;
+  }
+
+  .text {
+      font-size: 16px;
+  }
+
+  #title {
+      font-size: 13px;
+  }
+}
+
+
+
+    // la inn en del fra css filen fra ak2//

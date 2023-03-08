@@ -1,33 +1,25 @@
-import RecipeCard from './RecipeCard';
-import RecipePage from './RecipePage';
+import ProductCategory from "./ProductCategory";
+import ProductPrice from "./ProductPrice";
+import ProductTitle from "./ProductTitle";
 
-
-
-
-export default function Main({resources, title, url, category}){
-    const Menu = () => {
- 
-        const menuContent = resources.map((resources) => {
-    
-          return (
-            <section className="menuCategory">
-              <button onClick={Menu}>{resources.category}</button>
-              <div className="open">
-                <p className="text">{resources.text}</p>
-                <ul className="menuContent">{resources.sources.map((item) => ( 
-                  <li><a target="_blank" href={item.url}>{item.title}</a></li> 
-                ))}</ul>
-              </div>
-            </section>
-          );
-      
-        });
-      
-
-      
-        return (
-          <ul>{menuContent}</ul>
-      
-        );
-    }
+export default function Main({name, url, cat}){
+    return(
+        <article className="Main">
+            <ProductTitle productname={name}/>
+            <ProductPrice url={url}/>
+            <ProductCategory cat={cat}/>
+        </article>
+    )
 }
+
+
+
+
+
+
+
+
+
+
+
+

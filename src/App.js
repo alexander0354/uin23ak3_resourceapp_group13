@@ -1,13 +1,7 @@
-<<<<<<< HEAD
-import logo from './logo.svg';
-import './sass/App.scss';
-import './App.css';
-=======
 import React from 'react';
 import { BrowserRouter as Router, Route } from 'react-router-dom';
 import Layout from './components/Layout';
 import Routes from './components/Resources';
->>>>>>> f84d77d1af29e3e4b117ef945667fbc1e9db38d4
 
 function App() {
   return (

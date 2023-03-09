@@ -1,6 +1,11 @@
-import React from 'react';
+import React, { useState } from 'react';
+import { resources } from '../resources/ressurser';
+import { NavLink } from 'react-router-dom';
 
 export default function Layout(props) {
+  const [selectedCategory, setSelectedCategory] = useState('html');
+  const resources = props.resources ? props.resources.filter(resource => resource.category === selectedCategory) : [];
+  //console.log(resources)
   return (
     <div className="container">
       <header>
@@ -8,21 +13,25 @@ export default function Layout(props) {
       </header>
       <nav id="menu">
         <ul>
-          <li><a href="/html">HTML</a></li>
-          <li><a href="/css">CSS</a></li>
-          <li><a href="/javascript">JavaScript</a></li>
-          <li><a href="/react">React</a></li>
-          <li><a href="/sanity">Sanity</a></li>
+          <li onMouseEnter={() => setSelectedCategory('html')}>
+            <NavLink to="/html">HTML</NavLink>
+          </li>
+          <li onMouseEnter={() => setSelectedCategory('css')}>
+            <NavLink to="/css">CSS</NavLink>
+          </li>
+          <li onMouseEnter={() => setSelectedCategory('javascript')}>
+            <NavLink to="/javascript">JavaScript</NavLink>
+          </li>
+          <li onMouseEnter={() => setSelectedCategory('react')}>
+            <NavLink to="/react">React</NavLink>
+          </li>
+          <li onMouseEnter={() => setSelectedCategory('sanity')}>
+            <NavLink to="/sanity">Sanity</NavLink>
+          </li>
         </ul>
       </nav>
       <main>
-        <h2>{props.categoryName}</h2>
-        {props.resources && props.resources.map((resource) => (
-          <div key={resource.url}>
-            <h3>{resource.title}</h3>
-            <p>{resource.url}</p>
-          </div>
-        ))}
+        {props.children}
       </main>
     </div>
   );

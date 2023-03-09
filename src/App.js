@@ -1,23 +1,21 @@
 import React from 'react';
-import { BrowserRouter as Router, Route } from 'react-router-dom';
+import { Routes, Route } from 'react-router-dom';
+import Home from './components/Home';
 import Layout from './components/Layout';
-import Routes from './components/Resources';
+import Component from './components/Component';
 
 function App() {
   return (
-    <Router>
       <Layout>
-        <Route exact path="/" component={Routes} />
-        <Route path="/html" render={() => <Routes category="html" />} />
-        <Route path="/css" render={() => <Routes category="css" />} />
-        <Route
-          path="/javascript"
-          render={() => <Routes category="javascript" />}
-        />
-        <Route path="/react" render={() => <Routes category="react" />} />
-        <Route path="/sanity" render={() => <Routes category="headless-cms" />} />
+        <Routes>
+          <Route index path="/" element={<Home />} />
+          <Route path="/html" element={<Component category="html" />} />
+          <Route path="/css" element={<Component category="css" />} />
+          <Route path="/javascript" element={<Component category="javascript" />} />
+          <Route path="/react" element={<Component category="react" />} />
+          <Route path="/sanity" element={<Component category="headless-cms" />} />
+        </Routes>
       </Layout>
-    </Router>
   );
 }
 

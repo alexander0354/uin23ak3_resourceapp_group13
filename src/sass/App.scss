@@ -4,6 +4,7 @@ $aquablue: #00FFFF;
 $white: #FFFFFF;
 $black: #000000;
 $gray: #5f5f5f;
+$light-grey:rgb(238, 238, 243);
 $maxwidth: 1200px;
 
 
@@ -19,14 +20,14 @@ header {
   padding: 1rem;
   padding-left: 2rem;
   justify-content: space-between;
-  border-style: groove
+
 }
 
 
 
 body{
    
-    color: $aquablue;
+    color: $gray;
       height: 100%;
       margin: 4.0%;
       background-color: $white ;
@@ -48,27 +49,27 @@ body{
   nav {
     width: 100%;
     display: flex;
-    border: 1px solid $black;
     padding: 1rem;
     padding-left: 2rem;
     justify-content: space-between;
-    border-style: groove
+  
    
 }
 
 nav a{
-  display: flex;
   text-decoration: none;
   color: $gray;
-  background-color: $white;
+  background-color: $light-grey;
   display: inline-block;
-  border-top: 1px solid $gray;
-  border-left: 1px solid $gray;
-  border-right: 1px solid $gray;
-  padding: 1.2rem;
-  font-size: 1.6rem;
+  border-top: 2px solid $black;
+  border-left: 2px solid $black;
+  border-right: 2px solid $black;
+  border-bottom: 1px solid $aquablue;
+  padding: 5rem;
+  font-size: 1.0rem;
   text-transform: uppercase;
   transition: ease-in-out .4s;
+  margin: 5px;
 
   
 }
@@ -110,14 +111,15 @@ nav a{
 }
 
 nav {
- 
-  padding: 10px; 
+  margin: 5px;
+  padding: 0px; 
 }
+
 
 nav ul {
   list-style-type: none; 
   margin: 0; 
-  padding: 0; 
+  padding: 0px; 
 }
 
 nav li {
@@ -133,9 +135,4 @@ nav a {
 nav a:hover {
   background-color: #00FFFF; 
 }
-
-
-
-
-
     // la inn en del fra css filen fra ak2//

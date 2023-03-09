@@ -40,17 +40,27 @@ body{
     main {
       width:100%;
       display: flex;
+      border-top: 5px solid $aquablue;
+      border-left: 2px solid $black;
+      border-right: 2px solid $black;
+      border-bottom: 2px solid $black;
       max-width: var(--maxwidth);
-      display: flex;
       flex-wrap: wrap;
-      padding-left: 2rem;
+      padding-left: 0rem;
+      margin: -10px;
+     
+    
+
+  }
+  main h1{
+    padding: 10px;  
   }
   
   nav {
     width: 100%;
     display: flex;
-    padding: 1rem;
-    padding-left: 2rem;
+    padding: 0.5rem;
+    padding-left: 1rem;
     justify-content: space-between;
   
    

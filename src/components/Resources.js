@@ -1,10 +1,15 @@
 import resources from "../resources/ressurser";
 
 export default function Resources({category}) {
-    console.log(resources.map(item => item.category === category ? item.title : null))
-    return (
-        <ul>
-            {resources.map(item => item.category === category ? <p>{item.title}</p> : null)}
-        </ul>
-    )
+  const filteredResources = resources.filter(resource => resource.category === category);
+
+  return (
+    <ul>
+      {filteredResources.map(item => (
+        <li key={item.title}>
+          <a href={item.url} target="_blank" rel="">{item.title}</a>
+        </li>
+      ))}
+    </ul>
+  );
 }
